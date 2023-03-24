@@ -47,7 +47,7 @@ def GetFiveStarBooks():
         "Number of reviews"
     ]
     ##TODO: FIX THIS RANGE
-    for i in range(1, 51):
+    for i in range(1, 10):
         r = requests.get('https://books.toscrape.com/catalogue/page-{0}.html'.format(i))
         soup = BeautifulSoup(r.content, 'html.parser')
         page_range = soup.find_all("li", class_="current")[0].text.strip()
@@ -79,6 +79,7 @@ def GetFiveStarBooks():
                 product_details[row.find("th").text] = row.find("td").text
 
             fivestar_href_List.append(product_details)
+        print(page_range)
     return headers, fivestar_href_List
 
 def GetHistoricalFictionBooks():
@@ -96,7 +97,7 @@ def GetHistoricalFictionBooks():
         "Number of reviews"
     ]
     ##TODO: FIX THIS RANGE
-    for i in range(1, 11):
+    for i in range(1, 10):
         r = requests.get('https://books.toscrape.com/catalogue/page-{0}.html'.format(i))
         soup = BeautifulSoup(r.content, 'html.parser')
         page_range = soup.find_all("li", class_="current")[0].text.strip()
@@ -134,6 +135,7 @@ def GetHistoricalFictionBooks():
 
 #book_fivestar_data = GetFiveStarBooks()
 book_overprice_data = GetHistoricalFictionBooks()
+#pprint(book_overprice_data[1])
 WriteToCSV("test", book_overprice_data[0], book_overprice_data[1])
 
 
