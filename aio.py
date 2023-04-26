@@ -28,27 +28,22 @@ Helper Functions:
 Call Functions:
 
 - FetchFiveStar() 
-    Answers Prompt 1
     Collects all the five fiction books' href values and passes it to FetchBookInfo and returns
     a list of all the books' information.
 
 - FetchHistoricalFictionBooks()
-    Answers Prompt 2
     Collects all the historical fiction books' href values that has a price tag >$30.00 and passes it to FetchBookInfo and returns
     a list of all the books' information.
 
 - FetchInspirationalQuotes()
-    Answers Prompt 3
     Collects all the quotes', that contain the inspiration tag, href values and passes it to FetchAuthorInfo and returns
     a list of all the books' and authors' information.
 
 - FetchFriendshipQuotes()
-    Answers Prompt 4
     Collects all the authors', that wrote a quote containg the friendship tag, href values and passes it to FetchAuthorInfo and returns
     a list of all the authors' information.
 
 - FetchAllGenres
-    Answers Prompt 5
     Collects all the books' href values and grouped it by genre, which then passes it to FetchBookInfoWithGenre and returns
     a list of all the books' information.
 """
