@@ -5,8 +5,7 @@ from bs4 import BeautifulSoup
 import csv
 
 """
-This code is created by Edward Li, UIN: ejli2
-It answers the PeopleWeave Application Take-Home Assignment for the Data Collection role.
+This code is created by Edward Li
 This code uses the AIOHTTP library so to expedite the scraping process as data is being scraped
     asynchronously compared to the synchronous python requests library.
 BS4 is used to parse HTML code.
